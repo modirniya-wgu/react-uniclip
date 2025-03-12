@@ -1,16 +1,19 @@
 :root {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #213547;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Add smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 * {
@@ -23,15 +26,22 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+::selection {
+  background-color: #646cff;
+  color: white;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    background-color: #1a1b1e;
   }
-  
-  h1 {
-    color: #fff;
+
+  ::selection {
+    background-color: #535bf2;
+    color: white;
   }
 }
